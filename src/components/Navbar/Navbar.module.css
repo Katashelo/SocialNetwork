@@ -1,0 +1,37 @@
+.navbar {
+  grid-area: n;
+  background-color: rgb(226, 95, 116);
+ padding: 20px;
+}
+
+.items a{
+  color: aquamarine;
+  text-decoration: none;
+}
+
+.activeLink {
+  color: gold;
+}
+
+.itemsFriends {
+  margin-top: 30px;
+}
+
+.items img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.friendsItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.items {
+  display: flex;
+
+}
+

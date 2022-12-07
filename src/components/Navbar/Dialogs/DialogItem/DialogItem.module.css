@@ -1,0 +1,19 @@
+.DialogsItem {
+    margin-left: 5px;
+}
+
+.DialogsItem img {
+    float:inline-start
+    ;
+    margin-top: 15px;
+    margin-bottom: -8px;
+
+}
+
+.razmer {
+font-size: small
+}
+
+.razmerImen {
+    font-size: large;
+}
