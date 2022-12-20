@@ -1,14 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Friend } from "./Friends/Friends";
+// import { Friend } from "./Friends/Friends";
 import s from "./Navbar.module.css";
 
 
 
 const Navbar = (props) => {
 
+    // let state = props.store.getState().sidebar
     
-    let friendAll = props.friends.map(f => <Friend id={f.id} name={f.name}/> );
+    // let friendAll = state.friends.map(f => <Friend id={f.id} name={f.name}/> );
 
     return <div className={s.navbar}>
         <div className={s.items} >
@@ -35,9 +36,10 @@ const Navbar = (props) => {
             </div>
             </div>
         </div>
-        <div className={s.items}>
+        {/* <div className={s.items}>
         <div className={s.friendsItems}> {friendAll} </div>
-        </div></div>
+        </div> */}
+        </div>
 }
 
 export default Navbar;
