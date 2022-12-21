@@ -18,6 +18,9 @@ const Navbar = (props) => {
         <div className={s.items}>
             <NavLink to='dialogs' isActive style={({ isActive }) => isActive ? { color: `#000` } : undefined}> Messages</NavLink>
         </div>
+         <div className={s.items}>
+            <NavLink to='users' isActive style={({ isActive }) => isActive ? { color: `#000` } : undefined}> Users</NavLink>
+        </div>
         <div className={s.items}>
             <NavLink to='news' isActive style={({ isActive }) => isActive ? { color: `#000` } : undefined} >  News</NavLink>
         </div>

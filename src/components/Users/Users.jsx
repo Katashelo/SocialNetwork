@@ -5,46 +5,13 @@ import userPhoto from '../../assets/images/user.png'
 
 
 class Users extends React.Component {
-    constructor(props) {
-        super(props)
-
+    componentDidMount() {
         axios.get("https://social-network.samuraijs.com/api/1.0/users")
             .then(response => {
-                props.setUsers(response.data.items);
-
+                this.props.setUsers(response.data.items);
                 console.log(response.data.items);
             });
-
     }
-
-    // [
-    // {
-    //     id: 1,
-    //     photoUrl:
-    //         "https://i1.wp.com/www.pressfoto.ru/blog/wp-content/uploads/2013/10/How-to-make-a-portrait-photography-1.jpg?resize=600%2C338&ssl=1",
-    //     followed: true,
-    //     status: 'i am a superman',
-    //     name: "Yevhenii",
-    //     location: { city: "Poznan", country: "Poland" },
-    // },
-    // {
-    //     id: 2,
-    //     photoUrl:
-    //         "https://i1.wp.com/www.pressfoto.ru/blog/wp-content/uploads/2013/10/How-to-make-a-portrait-photography-1.jpg?resize=600%2C338&ssl=1",
-    //     followed: false,
-    //     status: 'i am a batman',
-    //     name: "Stas",
-    //     location: { city: "Cherkassy", country: "Ukraine" },
-    // },
-    // {
-    //     id: 3,
-    //     photoUrl:
-    //         "https://i1.wp.com/www.pressfoto.ru/blog/wp-content/uploads/2013/10/How-to-make-a-portrait-photography-1.jpg?resize=600%2C338&ssl=1",
-    //     followed: true,
-    //     status: 'i am a good boss',
-    //     name: "Vlad",
-    //     location: { city: "Tbilisi", country: "Georgia" }
-    // } ]
     render() {
         return <div> {
 
