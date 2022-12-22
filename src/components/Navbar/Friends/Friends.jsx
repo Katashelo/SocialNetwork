@@ -17,7 +17,7 @@ export const Friend = (props) => {
 const Friends = (props) => {
 let state = props.friends
 console.log(state)
-let friendsElement = props.friends.map(f=> <Friend name={f.name} id={f.id}/>)
+// let friendsElement = props.friends.map(f=> <Friend name={f.name} id={f.id}/>)
 
     return (
         <div>
