@@ -26,9 +26,6 @@ const MyPost = (props) => {
     return (
         <div className={s.postsBlock}>
             <div className={s.contentBlock}>
-                <div>
-                    ava + description
-                </div >
                 <div>My Post</div>
                 <div>
                     <textarea onChange={onPostChange} ref={newPostElement} value={props.profilePage.newPost} ></textarea>

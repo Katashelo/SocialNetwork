@@ -5,11 +5,11 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
 const Profile = (props) => {
-
+ 
     return <div className={s.content}>
 
-        <ProfileInfo />
-        <MyPostContainer store={props.store}/>
+        <ProfileInfo profile={props.profile}/>
+        <MyPostContainer />
 
     </div>
 
