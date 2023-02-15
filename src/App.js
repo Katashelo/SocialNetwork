@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import News from "./components/Navbar/News/News";
@@ -9,6 +8,7 @@ import FriendsContainer from "./components/Navbar/Friends/FriendsContainer";
 import UsersContainer from "./components/Users/usersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 
 
@@ -36,6 +36,7 @@ const App = (props) => {
           <Route path="/news" element={<News />} />
           <Route path="/friends/*" element={<FriendsContainer/>} />
           <Route path="/users/*" element={<UsersContainer/>} />
+          <Route path="/login/*" element={<Login/>} />
           
         </Routes>
       </div>

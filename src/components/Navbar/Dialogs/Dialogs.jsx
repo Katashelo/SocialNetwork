@@ -23,6 +23,7 @@ console.log(toto)
         props.onMessageChange(textMessage);
     }
 
+ 
 
     return (
         <div className={s.Dialogs}>
