@@ -1,5 +1,5 @@
 const ADD_MESSAGE = "ADD_MESSAGE";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE_NEW_MESSAGE_TEXT";
+
 
 let initialState = {
   dialogs: [
@@ -13,34 +13,30 @@ let initialState = {
     { id: 2, message: "Howe are your?" },
     { id: 3, message: "Kun" },
   ],
-  newMessage: "",
+
 };
 
 const dialogsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MESSAGE: {
-      let userMessage = { id: 4, message: state.newMessage };
-      let stateCopy = {...state};
-      stateCopy.messages = [...state.messages];
-      stateCopy.messages.push(userMessage);
-      stateCopy.newMessage = "";
-      return stateCopy;
+      let userMessage = { id: 4, message: action.newMessageBody };
+      return {
+        ...state, 
+        messages: [...state.messages, userMessage]
+      }
+      // let stateCopy = {...state};
+      // stateCopy.messages = [...state.messages];
+      // stateCopy.messages.push(userMessage);
+      // stateCopy.newMessage = "";
+      // return stateCopy;
     }
 
-    case UPDATE_NEW_MESSAGE_TEXT: {
-      let stateCopy = {...state};
-      stateCopy.newMessage = action.textMessage;
-      return stateCopy;
-    }
     default:
       return state;
   }
 };
 
-export const addNewMessageCreate = () => ({ type: ADD_MESSAGE });
-export const updateNewMessageTextActionCreate = (textMessage) => ({
-  type: UPDATE_NEW_MESSAGE_TEXT,
-  textMessage: textMessage,
-});
+export const addNewMessageCreate = (newMessageBody) => ({ type: ADD_MESSAGE, newMessageBody });
+
 
 export default dialogsReducer;

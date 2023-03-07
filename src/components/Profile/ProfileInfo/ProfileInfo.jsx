@@ -2,6 +2,7 @@ import React from 'react';
 import Preloader from '../../common/Preloader/Preloader';
 import s from './ProfileInfo.module.css';
 import ProfileStatus from './ProfileStatus';
+import userPhoto from '../../../assets/images/user.png'
 
 const ProfileInfo = (props) => {
 
@@ -11,13 +12,10 @@ if (!props.profile) {
 let age = 20;
     return (
         <div>
-            {/* <div>
-                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" />
-            </div> */}
             <div>
-                <img src={props.profile.photos.large}/>
+                <img src={!props.profile.photos.large && userPhoto } className={s.userPhoto} />
 
-                <ProfileStatus status={'Nakonecto'}/>
+                <div className={s.Status}> <ProfileStatus status={props.status} updateStatus={props.updateStatus} /> </div> 
                  <div> {props.profile.contacts.facebook} </div>
                  <div> {age > 18 ? 'ищу работу' : 'ne shukaju'} </div>
             </div>
