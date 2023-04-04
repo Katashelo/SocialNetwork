@@ -4,17 +4,17 @@ import s from "./Header.module.css";
 
 const Header = (props) => {
     return <div className={s.header}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/2000px-NBC_logo.svg.png"/> Yevheniigramm
-   
-  
-    <div className={s.loginBlock}>
-        { props.isAuth ? props.login:
-    <NavLink to={'/login/'}>  login  </NavLink>}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/2000px-NBC_logo.svg.png" /> Yevheniigramm
+
+
+        <div className={s.loginBlock}>
+            {props.isAuth ? <div> {props.login} --- <button onClick={props.logout} >Log Out</button> </div>
+                : <NavLink to={'/login/'}>  login  </NavLink>}
+        </div>
+
+
     </div>
 
-
-        </div>
-    
 
 }
 
