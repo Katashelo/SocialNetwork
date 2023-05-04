@@ -3,6 +3,7 @@ import Preloader from '../../common/Preloader/Preloader';
 import s from './ProfileInfo.module.css';
 import ProfileStatus from './ProfileStatus';
 import userPhoto from '../../../assets/images/user.png'
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
 
@@ -15,7 +16,7 @@ let age = 20;
             <div>
                 <img src={!props.profile.photos.large && userPhoto } className={s.userPhoto} />
 
-                <div className={s.Status}> <ProfileStatus status={props.status} updateStatus={props.updateStatus} /> </div> 
+                <div className={s.Status}> <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} /> </div> 
                  <div> {props.profile.contacts.facebook} </div>
                  <div> {age > 18 ? 'ищу работу' : 'ne shukaju'} </div>
             </div>
